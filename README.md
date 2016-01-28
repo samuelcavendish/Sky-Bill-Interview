@@ -10,7 +10,7 @@ Prerequisites:
 Instructions:
 * Clone/download the solution
 * Open the solution in visual studio
-* Run the web project using one of the two configured profiles (either IIS Express or web). I would recommend running using web which will cause the site to be hosted by Kestrel (swapping can be achieved using the dropdown as shown in the example image)
+* Run the web project using one of the two configured profiles (either IIS Express or web). I would recommend running using web which will cause the site to be hosted by Kestrel (swapping can be achieved using the dropdown as shown in the example image). After starting it hosting with Kestrel you can debug -> Detatch all to leave debug mode. The host process will still be running
 
 <img src="http://blogs.msdn.com/resized-image.ashx/__size/550x0/__key/communityserver-blogs-components-weblogfiles/00-00-00-63-56/0458.commands.png" />
 
