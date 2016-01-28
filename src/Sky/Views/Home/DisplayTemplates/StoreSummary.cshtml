@@ -1,0 +1,32 @@
+﻿@model Sky.Models.Bills.Store.StoreSummary
+
+@if (Model != null)
+{
+    <section class="store-summary summary accordian accordian-section" data-trigger="accordian-expand" data-store-summary>
+        <header>
+            <a class="expandable" href="#/">
+                <span class="title">
+                    My store purchases
+                </span>
+                <span class="amount" data-total>
+                    @Model.Total.ToString("C")
+                </span>
+                <span class="chevron"></span>
+            </a>
+        </header>
+        <div class="detail" data-summary-details>
+            <div class="item-list films" data-summary-items>
+                <h3>Rentals</h3>
+                @Html.DisplayFor(x => x.Rentals)
+            </div>
+            <div class="item-list films" data-summary-items>
+                <h3>Buy and Keep</h3>
+                @Html.DisplayFor(x => x.BuyAndKeep)
+            </div>
+            <div class="statement-total" data-summary-total>
+                <span class="label">Total</span>
+                <span class="amount" data-total>@Model.Total.ToString("C")</span>
+            </div>
+        </div>
+    </section>
+}

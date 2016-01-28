@@ -1,0 +1,11 @@
+{
+    "version": "1.0.0-*",
+    "description": "Models Class Library",
+    "authors": [ "Samuel" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+    "frameworks": {
+        "dnx451": { }
+    }
+}

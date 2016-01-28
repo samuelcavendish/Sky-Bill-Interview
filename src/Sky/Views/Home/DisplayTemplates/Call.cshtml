@@ -1,0 +1,8 @@
+﻿@model Sky.Models.Bills.Calls.Call
+
+<div class="item call">
+    <div class="details" data-item>
+        <span class="label number" data-label>@Model.Called - <span class="duration">@Model.Duration</span></span>
+        <span class="total" data-total>@Model.Cost.ToString("C")</span>
+    </div>
+</div>

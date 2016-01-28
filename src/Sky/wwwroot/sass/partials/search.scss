@@ -1,0 +1,195 @@
+﻿@import '../mixins/mixins.scss';
+
+body > header {
+    div.main-header {
+        form.search-wrapper {
+            @media screen and (min-width: $break-medium) {
+                width: 370px;
+                margin-right: 0;
+                margin-bottom: 12px;
+                float: right;
+                margin: 18px 10px 10px;
+                position: relative;
+                z-index: 90;
+                padding-top: 16px;
+
+                .search-field {
+                    padding-right: 0 !important;
+                    border: 1px solid #ccc;
+                    background: #fff;
+                    clear: both;
+                    -webkit-transition: all .25s;
+                    -moz-transition: all .25s;
+                    -ms-transition: all .25s;
+                    -o-transition: all .25s;
+                    transition: all .25s;
+                    position: relative;
+                    margin: 5px 0;
+                    height: 32px;
+                    padding: 0;
+                    z-index: 90;
+                    border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -o-border-radius: 5px;
+
+                    label {
+                        cursor: text;
+                        font-family: skytextregular,helvetica,arial;
+                        font-size: 13px;
+                        border: 0;
+                        position: relative;
+                        text-align: left;
+                        height: 100%;
+                        float: none;
+                        min-width: 3.53107%;
+
+                        input {
+                            -ms-appearance: textfield;
+                            -moz-appearance: textfield;
+                            -webkit-appearance: textfield;
+                            -appearance: textfield;
+                            z-index: -1;
+                            position: relative;
+                            padding-left: 4px;
+                            padding-right: 4px;
+                            color: #333;
+                            font-family: SkyTextRegular,helvetica,arial;
+                            font-size: 14px;
+                            top: 0;
+                            left: 0;
+                            background: 0 0;
+                            width: 100%;
+                            height: 100%;
+                            box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            -ms-box-sizing: border-box;
+                            -webkit-box-sizing: border-box;
+                            -khtml-box-sizing: border-box;
+                            margin: 0;
+                            padding: 0 127px 0 5px;
+                            text-align: left;
+                        }
+                    }
+
+                    .search-button-image {
+                        width: 35px;
+                        overflow: hidden;
+                        display: block;
+                        font-family: skyicons;
+                        height: 33px;
+                        line-height: 33px;
+                        position: absolute;
+                        z-index: 1000;
+                        right: 0;
+                        top: 0;
+                        -webkit-transition: all .25s;
+                        -moz-transition: all .25s;
+                        -ms-transition: all .25s;
+                        -o-transition: all .25s;
+                        transition: all .25s;
+                        cursor: pointer;
+                        color: #fff !important;
+                        background-color: #0073c5;
+
+                        &:before {
+                            content: "\f106";
+                            position: absolute;
+                            right: 10px;
+                            top: 0;
+                        }
+
+                        input {
+                            text-indent: 500px;
+                            background: 0 0;
+                            position: relative;
+                            float: none;
+                            width: 100%;
+                            height: 34px;
+                            padding: 0;
+                            z-index: 1000;
+                            outline: 0;
+                            font-family: skytextregular,helvetica,arial;
+                            font-size: 1.1em;
+                            color: #fff !important;
+                            font: 1em SkyTextMedium,helvetica,arial;
+                            top: -1px;
+                            right: 1px;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: $break-medium) {
+                border-right: 1px solid #d1d1d1;
+                -moz-transition: left 150ms ease-in-out;
+                -webkit-transition: left 150ms ease-in-out;
+                -ms-transition: left 150ms ease-in-out;
+                -o-transition: left 150ms ease-in-out;
+                transition: left 150ms ease-in-out;
+                z-index: 1;
+                position: fixed;
+                top: 0;
+                left: -270px;
+
+                .search-field {
+                    width: 270px;
+                    height: 44px;
+                    background-color: #fff;
+
+                    span.search-button-image {
+                        display: none;
+                    }
+
+                    label {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 250px;
+                        height: 27px;
+                        z-index: 1;
+                        padding: 8px 0;
+                        background: #FFF;
+                        background: rgba(255,255,255,.95);
+                        margin: 0 10px;
+                        border-bottom: 1px solid #d1d1d1;
+
+
+                        input {
+                            position: absolute;
+                            top: 10px;
+                            left: 16px;
+                            font-size: 1em;
+                            font-family: skytextregular;
+                            color: #666;
+                            width: 80%;
+                            border-radius: 23px;
+                            border-width: 0;
+                            background-color: transparent;
+                            height: 23px;
+                            line-height: 23px;
+                            padding-left: 10px;
+                            -ms-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            -khtml-box-sizing: border-box;
+                            -webkit-box-sizing: border-box;
+                            box-sizing: border-box;
+                            -webkit-appearance: textfield;
+                            -webkit-user-modify: read-write-plaintext-only;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.navigation-open > header {
+    div.main-header {
+        form.search-wrapper {
+            @media screen and (max-width: $break-medium) {
+                left: 0;
+            }
+        }
+    }
+}

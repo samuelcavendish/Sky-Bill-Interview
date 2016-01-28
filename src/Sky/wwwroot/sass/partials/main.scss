@@ -1,0 +1,309 @@
+﻿@import '../mixins/mixins.scss';
+
+body > main {
+    h1 {
+        margin: 0.625em 0 0;
+        line-height: 56px;
+        font-size: 52px;
+        font-weight: normal;
+
+        @media screen and (min-width: $break-medium) {
+            font-size: 40px;
+            border-bottom: 1px solid $h1-border-color;
+            padding-bottom: 12px;
+        }
+
+        @media screen and (max-width: $break-medium) {
+            padding: 0 14px;
+            font-size: 32px;
+        }
+    }
+
+    section.bill {
+        @media screen and (min-width: $break-medium) {
+            width: 65.61404%;
+            float: left;
+        }
+
+        margin-bottom: 2em;
+
+        h2 {
+            font-size: 44px;
+            line-height: 38px;
+            margin: 20px;
+            font-weight: normal;
+
+            .date {
+                display: block;
+            }
+
+            @media screen and (min-width: $break-large) {
+                .date {
+                    display: inline;
+                }
+            }
+
+            @media screen and (min-width: $break-medium) {
+                font-size: 32px;
+                line-height: 36px;
+                margin: 10px 0 10px;
+            }
+
+            @media screen and (max-width: $break-medium) {
+                margin: 10px 0 10px;
+                padding: 0 14px;
+                font-size: 24px;
+            }
+        }
+
+        p {
+            @media screen and (min-width: $break-medium) {
+                margin: 10px 0 10px;
+            }
+
+            @media screen and (max-width: $break-medium) {
+                padding: 0 14px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            margin: 20px;
+        }
+
+        section.summary {
+            display: table;
+            width: 100%;
+            border-top: 1px solid $summary-section-border-color;
+            border-bottom: 1px solid $summary-section-border-color;
+
+            &.accordian.accordian-section {
+                header {
+                    a.expandable {
+                        display: table;
+                        text-decoration: none;
+                        color: $accordian-header-color;
+                        height: inherit;
+                        width: 100%;
+
+                        .amount {
+                            padding-right: 0;
+                        }
+
+                        .chevron {
+                            width: 61px;
+                            text-align: center;
+                            font-size: 32px;
+
+                            &:before {
+                                @extend i.icon;
+                                @extend i.icon-chevron-down;
+                            }
+                        }
+                    }
+                }
+
+                .detail {
+                    display: none;
+                }
+
+                &.open {
+                    header a.expandable {
+                        .amount {
+                            visibility: hidden;
+                        }
+
+                        .chevron:before {
+                            @extend i.icon;
+                            @extend i.icon-chevron-up;
+                        }
+                    }
+
+                    .detail {
+                        display: block;
+                    }
+                }
+            }
+
+            header {
+                background-color: $summary-header-background-color;
+                height: 83px;
+                display: table-row;
+
+                span {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+
+                .title {
+                    font-size: 28px;
+                    max-width: 220px;
+                    padding-left: 20px;
+
+                    @media screen and (max-width: $break-medium) {
+                        font-size: 18px;
+                        max-width: 180px;
+                        padding-left: 15px;
+                    }
+                }
+
+                .amount {
+                    @media screen and (max-width: $break-medium) {
+                        font-size: 18px;
+                        max-width: 180px;
+                        padding-left: 15px;
+                    }
+
+                    padding-right: 61px;
+                    font-size: 32px;
+                    text-align: right;
+                }
+            }
+
+            .detail {
+                .item-list {
+                    max-height: 300px;
+                    overflow-y: auto;
+
+                    &.films {
+                        h3 {
+                            margin: 0 61px -1px;
+                            padding: 13px 0px 14px;
+                        }
+
+                        .item {
+                            margin: 0 61px -1px 91px;
+                        }
+                    }
+
+                    .item {
+                        display: table;
+                        margin: 0 61px -1px;
+                        padding: 13px 0px 14px;
+                        border-bottom: 1px solid #ccc;
+
+                        .details {
+                            display: table-row;
+
+                            .label {
+                                width: 100%;
+                                font-size: 16px;
+                                display: table-cell;
+                                line-height: 1.3;
+                            }
+
+                            .total {
+                                vertical-align: bottom;
+                                text-align: right;
+                                white-space: nowrap;
+                                padding: 0 20px 0 16px;
+
+                                @media screen and (min-width: $break-medium) {
+                                    padding-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .statement-total {
+                    margin: 0 61px;
+                    line-height: 64px;
+                    font-size: 20px;
+
+                    &.film {
+                        .total {
+                        }
+                    }
+
+                    .amount {
+                        font-size: 32px;
+                        float: right;
+                    }
+                }
+            }
+
+            &.bill-summary {
+                font-weight: bold;
+                margin: 16px 0;
+            }
+        }
+
+        .statement-date {
+            .date {
+                font-weight: bold;
+            }
+
+            a.print {
+                float: right;
+                padding-right: 20px;
+            }
+
+            @media screen and (min-width: $break-small) {
+                font-size: 12px;
+                font-family: Helvetica,Arial;
+                padding: 10px 0 0 14px;
+            }
+        }
+    }
+
+    section.navigation {
+        @media screen and (min-width: $break-medium) {
+            width: 31.22807%;
+            margin-left: 3.15789%;
+            float: left;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 36px;
+            margin: 10px 0 10px;
+            font-weight: normal;
+        }
+
+        .sky-form {
+            select {
+                border: 1px solid $sky-form-border-color;
+                border-radius: 5px;
+                color: $sky-form-color;
+                height: 2em;
+                font: 16px/1em SkyTextRegular,Helvetica,Arial,sans-serif;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                -moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.06) inset;
+                -webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.06) inset;
+                box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.06) inset;
+                font-family: SkyTextRegular;
+                font-size: 16px;
+                width: 221px;
+                height: 2em;
+                margin: 0;
+                padding: 0 10px;
+                outline: none;
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+
+        .bill-links {
+            ul {
+                padding: 0;
+                margin: 0;
+                padding-bottom: 25px;
+
+                li {
+                    padding: 4px 0;
+                    list-style: none;
+
+                    a {
+                        i {
+                            text-decoration: none;
+                            margin-right: 0;
+                            padding-right: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

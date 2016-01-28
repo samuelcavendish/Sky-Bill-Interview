@@ -1,0 +1,52 @@
+﻿<header role="banner">
+    <div class="main-header container" data-header-bar>
+        <div class="header-wrapper">
+            <a class="menu-button" data-trigger="navigation" href="#/">
+                <i class="icon icon-burger"></i>
+            </a>
+            <a class="profile-button" href="#/">
+                <i class="icon icon-user-profile"></i>
+            </a>
+
+            <a href="#/" class="logo">
+                <i class="sprite-sky-logo"></i>
+            </a>
+        </div>
+
+        @Html.Partial("Search")
+    </div>
+    <nav role="navigation" aria-labelledby="skycom-main-menu">
+        <div class="nav-wrapper">
+            <ul class="container">
+                <li>
+                    <a href="#/" class="home">Home</a>
+                </li>
+                <li>
+                    <a href="#/">Find &amp; Watch TV</a>
+                </li>
+                <li>
+                    <a href="#/">Shop</a>
+                </li>
+                <li>
+                    <a href="#/" class="selected">My Sky</a>
+                </li>
+                <li>
+                    <a href="#/">Help &amp; Support</a>
+                </li>
+
+                <li id="sky-welcome" class="tool">
+                    <a href="#/"><i class="icon icon-user-account" aria-hidden="true"></i><span id="skycom-welcomeName" class="skycom-ellipsis">User</span><div class="skycom-pointer"></div></a>
+                </li>
+                <li id="sky-signin" class="tool">
+                    <a href="#/">Sign In<div class="skycom-pointer"></div></a>
+                </li>
+                <li id="sky-signout" class="tool">
+                    <a href="#/">Sign Out</a>
+                </li>
+                <li id="sky-email" class="tool">
+                    <a href="#/"><i class="icon icon-mail" aria-hidden="true"></i>Email</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

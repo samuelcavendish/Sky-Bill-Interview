@@ -1,0 +1,284 @@
+﻿@import "../mixins/mixins.scss";
+
+body > header {
+    nav {
+        display: block;
+        line-height: 2.444em;
+        background: 0 0;
+        position: relative;
+
+        &.open {
+            left: 0;
+        }
+
+        -moz-transition: left 150ms ease-in-out;
+        -webkit-transition: left 150ms ease-in-out;
+        -ms-transition: left 150ms ease-in-out;
+        -o-transition: left 150ms ease-in-out;
+        transition: left 150ms ease-in-out;
+
+        @media screen and (max-width: $break-medium) {
+            margin: 43px 0 0;
+            width: $mobile-nav-width;
+            position: fixed;
+            top: 0;
+            left: -270px;
+            background: $nav-background-color;
+            z-index: 0;
+            width: 270px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100%;
+            font-size: 1.125em;
+            font-family: SkyTextRegular;
+            border-right: 1px solid $nav-border-color;
+        }
+
+        .nav-wrapper {
+            clear: both;
+            position: relative;
+            overflow: visible;
+
+            &:before {
+                content: '\0020';
+                display: block;
+                overflow: hidden;
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                @media screen and (min-width: $break-medium) {
+                    margin: 0 auto;
+                }
+
+                li {
+                    @media screen and (max-width:$break-medium) {
+                        -moz-transition: height 200ms ease-in-out;
+                        -webkit-transition: height 200ms ease-in-out;
+                        -ms-transition: height 200ms ease-in-out;
+                        -o-transition: height 200ms ease-in-out;
+                        transition: height 200ms ease-in-out;
+                        cursor: pointer;
+                        overflow: hidden;
+                        width: 100%;
+
+                        i.icon {
+                            display: none;
+                        }
+                    }
+
+                    @media screen and (min-width:$break-medium) {
+                        float: left;
+                    }
+
+                    a {
+                        &.home {
+                            @media screen and (min-width: $break-medium){
+                            padding-left: 0;
+                            margin-left: 0;
+                            }
+                        }
+
+                        display: block;
+                        z-index: 1;
+                        text-decoration: none;
+                        font-size: 1em;
+                        line-height: 2.45em;
+                        font-weight: 400;
+                        margin: 0 8px;
+                        border-top: 1px solid $nav-border-color;
+                        position: relative;
+
+                        @media screen and (min-width: $break-medium) {
+                            border: none;
+                            padding: 0 20px;
+                            line-height: 1.5em;
+                            height: 1.5em;
+                            background: #fff;
+                            position: relative;
+                            display: block;
+                            font-family: SkyTextRegular,helvetica,arial;
+                            font-size: 1.12em;
+                            color: #333;
+                            text-align: center;
+                            font-weight: lighter;
+                            z-index: 252;
+                            zoom: 1;
+                        }
+
+                        &.selected {
+                            font-family: SkyTextMedium;
+                            position: relative;
+                            color: $nav-current-page-color;
+                            cursor: default;
+                        }
+                    }
+
+                    &.tool {
+                        @media screen and (min-width: $break-medium) {
+                            position: absolute;
+                            background: #fff !important;
+                            text-align: left !important;
+                            padding: 0 10px;
+                            border: none;
+                            overflow: visible;
+                            font-family: SkyTextRegular;
+                            line-height: 2.25em;
+                            color: #333;
+                            font-weight: lighter;
+                            z-index: 41;
+
+                            a {
+                                color: #333;
+                                display: inline-block !important;
+                                font-size: 16px;
+                                border: 0 !important;
+                                box-shadow: none !important;
+                                text-align: left;
+                                white-space: nowrap;
+                                margin: 6px 0;
+                                padding: 0 !important;
+                                line-height: 1em !important;
+                            }
+
+                            i.icon {
+                                margin-top: -5px;
+                                margin-right: 7px;
+                                font-size: 19px;
+                                color: #0073c5;
+                            }
+                        }
+                    }
+
+                    &#sky-welcome {
+                        @media screen and (min-width: $break-medium) {
+                            position: absolute;
+                            top: -54px;
+                            right: 485px;
+                            background: #fff;
+                            text-align: left;
+                            padding: 0 10px;
+                            font-size: 18px;
+                            height: auto;
+                            border: none;
+                            max-width: 145px;
+                            margin-top: 0;
+                            width: auto;
+                            box-shadow: none;
+                        }
+                    }
+
+                    &#sky-signin {
+                        @media screen and (min-width: $break-medium) {
+                            height: 1.1em;
+                            font-size: 13px;
+                            margin: 0;
+                            padding-left: 0;
+                            top: -20px !important;
+                            z-index: 41;
+                            right: 530px;
+                            width: auto;
+                            box-shadow: none;
+
+                            a {
+                                font-size: 13px;
+                                margin: 0;
+                                float: right;
+                                text-align: right;
+                                color: #0070a5;
+                                border-left: 1px solid #aaa;
+                            }
+
+                            &:after {
+                                content: '';
+                                display: block;
+                                background-color: #666;
+                                height: .75em;
+                                width: 1px;
+                                position: absolute;
+                                right: 0;
+                                top: 1px;
+                            }
+                        }
+                    }
+
+                    &#sky-signout {
+                        @media screen and (min-width: $break-medium) {
+                            right: 465px;
+                            height: 1.1em;
+                            font-size: 13px;
+                            margin: 0;
+                            padding-left: 0;
+                            top: -20px !important;
+                            width: auto;
+                            box-shadow: none;
+
+                            a {
+                                font-size: 13px;
+                                margin: 0;
+                                float: right;
+                                text-align: right;
+                                color: #0070a5;
+                                border-left: 1px solid #aaa;
+                            }
+                        }
+                    }
+
+                    &#sky-email {
+                        @media screen and (min-width: $break-medium) {
+                            position: absolute;
+                            top: -54px;
+                            right: 390px;
+                            background: #fff;
+                            text-align: left;
+                            padding: 0 10px;
+                            font-size: 18px;
+                            height: auto;
+                            border: none;
+                            max-width: 145px;
+                            margin-top: 0;
+                            min-width: 0;
+                            width: auto;
+
+                            a {
+                                cursor: pointer;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: $break-medium) {
+            ul {
+                background: #fff;
+                border: 0;
+                height: auto;
+                clear: both;
+                position: relative;
+                overflow: visible;
+            }
+        }
+    }
+}
+
+body.navigation-open {
+    @media screen and (max-width: $break-medium) {
+        position: fixed;
+        left: $mobile-nav-width + 1;
+        width: 100%;
+        min-width: 320px;
+        -moz-transition: left 150ms ease-in-out;
+        -webkit-transition: left 150ms ease-in-out;
+        -ms-transition: left 150ms ease-in-out;
+        -o-transition: left 150ms ease-in-out;
+        transition: left 150ms ease-in-out;
+    }
+}

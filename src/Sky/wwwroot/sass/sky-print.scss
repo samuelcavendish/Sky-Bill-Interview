@@ -1,0 +1,79 @@
+﻿body {
+    & > header {
+        .main-header {
+            margin: auto !important;
+
+            .header-wrapper {
+                .menu-button, .profile-button {
+                    display: none !important;
+                }
+
+                .logo {
+                    width: 100% !important;
+                    -webkit-print-color-adjust: exact;
+                }
+            }
+
+            form.search-wrapper {
+                display: none;
+            }
+        }
+
+        nav {
+            display: none !important;
+        }
+    }
+
+    & > main h1 {
+        padding: 0 14px !important;
+        font-size: 32px !important;
+    }
+
+    section.bill {
+        h2 {
+            margin: 10px 0 10px !important;
+            padding: 0 14px !important;
+            font-size: 24px !important;
+        }
+
+        section.summary {
+            & header {
+                background-color: white !important;
+            }
+
+            border-color: black !important;
+
+            .item-list item {
+                border-color: black !important;
+            }
+        }
+
+        .accordian.accordian-section {
+            & > header .amount {
+                display: none;
+            }
+
+            .detail {
+                display: block !important;
+
+                .item-list {
+                    max-height: none;
+                }
+            }
+        }
+
+        .statement-date {
+            a.print {
+                display: none;
+            }
+        }
+    }
+
+    section.navigation {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+}

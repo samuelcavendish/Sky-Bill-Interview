@@ -1,0 +1,63 @@
+﻿@import 'partials/reset.scss';
+@import 'partials/header.scss';
+@import 'partials/main.scss';
+@import 'partials/fonts.scss';
+@import 'partials/icons.scss';
+@import 'partials/footer.scss';
+
+body {
+    .container {
+        width: 94.05941%;
+        max-width: 974px;
+        margin: 0 auto;
+        clear: left;
+        overflow: visible;
+    }
+
+    .breadcrumb-wrapper {
+        display: block;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 0;
+
+        .breadcrumb {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            line-height: 1.2em;
+            list-style: none;
+            padding: 8px 10px 0px 0;
+            font-size: 0.812em;
+            min-height: 32px;
+
+            li {
+                &:first-child {
+                    font-family: SkyTextMedium, Helvetica, Arial, sans-serif;
+
+                    a {
+                        padding-left: 0;
+                    }
+                }
+
+                float: left;
+                height: 1.7em;
+
+                a {
+                    line-height: 16px;
+                    color: #333;
+                    -webkit-transition: width 1.5s ease-in;
+                    -moz-transition: width 1.5s ease-in;
+                    -ms-transition: width 1s ease-in;
+                    -o-transition: width 1s ease-in;
+                    transition: width 1.5s ease-in;
+                    white-space: nowrap;
+                    padding: 0 0.5pc;
+                    outline: 0;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    font: 16px/20px SkyTextRegular,Helvetica,Arial,sans-serif;
+}

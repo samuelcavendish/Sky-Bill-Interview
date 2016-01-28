@@ -1,0 +1,32 @@
+﻿@model Sky.Models.Bills.Bill
+
+@if (Model == null)
+{
+    <h2>Sorry, a problem has occured</h2>
+    <p>We have been unable to retrieve your bill. We apologise for the inconvenience, please try again later</p>
+
+    <p>If the problem persists please contact us on 01234567890</p>
+}
+else
+{
+    <h2>
+        Latest Bill <span class="date">(@Model.Statement.Period.From.ToString("dd MMM yyyy") - @Model.Statement.Period.To.ToString("dd MMM yyyy"))</span>
+    </h2>
+
+    @Html.DisplayFor(x => x.Package)
+    @Html.DisplayFor(x => x.CallCharges)
+    @Html.DisplayFor(x => x.SkyStore)
+
+    <section class="bill-summary summary">
+        <header>
+            <span class="title">Total Due @Model.Statement.Due.ToString("dd MMM yyyy")</span>
+            <span class="amount">@Model.Total.ToString("C")</span>
+        </header>
+    </section>
+    <div class="statement-date">
+        Statement Date: <span class="date">@Model.Statement.Generated.ToString("dd MMM yyyy")</span>
+        <a href="javascript:window.print()" class="print">
+            Print page
+        </a>
+    </div>
+}

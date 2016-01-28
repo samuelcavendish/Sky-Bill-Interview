@@ -1,0 +1,19 @@
+﻿{
+    "version": "1.0.0-*",
+    "description": "Services Class Library",
+    "authors": [ "Samuel" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "dependencies": {
+        "Microsoft.Net.Http": "2.2.22",
+        "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+        "Microsoft.AspNet.WebApi.Client": "4.0.20505",
+        "Models": "1.0.0-*"
+    },
+
+    "frameworks": {
+        "dnx451": { }
+    }
+}

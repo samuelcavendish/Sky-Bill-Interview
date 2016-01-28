@@ -1,0 +1,106 @@
+﻿@import '../mixins/mixins.scss';
+@import 'nav.scss';
+@import 'search.scss';
+
+body > header {
+    div.main-header {
+        position: relative;
+        z-index: 250;
+        line-height: 1em;
+        font-size: 1em;
+        font-family: helvetica,arial;
+        clear: both;
+        float: none;
+        margin: 0;
+        padding: 0;
+
+        div.header-wrapper {
+            position: relative;
+            height: 43px;
+            width: 100%;
+            background: $nav-background-color;
+            z-index: 30;
+
+            .menu-button {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 43px;
+                width: 43px;
+                border: 1px solid transparent;
+                z-index: 50;
+
+                i {
+                    margin: 15px 10px;
+                }
+            }
+
+            .profile-button {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: auto;
+                right: 0;
+                height: 43px;
+                width: 43px;
+                border: 1px solid transparent;
+                z-index: 50;
+
+                i {
+                    margin: 8px 10px;
+                    font-size: 24px;
+                    overflow: hidden;
+                }
+            }
+
+            .logo {
+                display: block;
+                margin: 0 auto;
+                width: 50px;
+
+                i.sprite-sky-logo {
+                    background: url(https://assets.sky.com/dist/1271/images/sprite-s936cb39d45.png) no-repeat;
+                    background-position: 0 -45px;
+                    height: 30px;
+                    width: 50px;
+                    margin: 7px 0;
+                    display: inline-block;
+                    overflow: hidden;
+                    vertical-align: middle;
+                }
+            }
+
+            @media screen and (min-width: $break-medium) {
+                float: left;
+                width: auto;
+
+                .logo {
+                    float: left;
+                    margin: 18px 0 14px;
+                    width: auto;
+
+                    i.sprite-sky-logo {
+                        background: url(https://assets.sky.com/dist/1271/static/sky-logo-redesign.png) no-repeat;
+                        height: 52px;
+                        width: 82px;
+                    }
+                }
+
+                .menu-button, .profile-button {
+                    display: none;
+                }
+            }
+        }
+
+        
+
+        @media screen and (min-width: $break-medium) {
+            width: 94.05941%;
+            max-width: 974px;
+            margin: 0 auto;
+            clear: left;
+            overflow: visible;
+        }
+    }
+}

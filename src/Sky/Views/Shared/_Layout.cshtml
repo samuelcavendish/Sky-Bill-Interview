@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/sky-print.css" rel="stylesheet" type="text/css" media="print" />
+
+    <link href="~/css/sky.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    @Html.Partial("Header")
+
+    <main>
+        @RenderBody()
+    </main>
+    
+    @Html.Partial("Footer")
+    <script type="text/javascript" src="~/js/sky.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿@import '../mixins/mixins.scss';
+
+body {
+    footer {
+        @media screen and (min-width: $break-medium) {
+            margin-top: 1.5em;
+            padding-top: 1.5em;
+            border-top: 1px solid #dcdcdc;
+
+            ul {
+                margin: 0 0 2.25em;
+                padding: 0;
+                display: inline-block;
+                vertical-align: top;
+
+                & > li {
+                    list-style-type: none;
+                    float: left;
+                    padding: 0 1.5em 0 0;
+
+                    .footer-link {
+                        font: 14px/2 skytextregular,Helvetica,Arial;
+                        color: #666;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        ul {
+            margin: 0 0 2.25em;
+            padding: 0;
+            display: inline-block;
+            vertical-align: top;
+
+            & > li {
+                padding: 0 .5em 0 0;
+                list-style-type: none;
+                float: left;
+
+                .footer-link {
+                    padding-left: .7em;
+                    line-height: 1.8;
+                    font: 14px/2 skytextregular,Helvetica,Arial;
+                    color: #666;
+                }
+            }
+        }
+
+        .copyright {
+            font: 14px/2 skytextregular,Helvetica,Arial;
+            color: #666;
+
+            a {
+                text-decoration: none;
+
+
+                i.footer-icon {
+                    @media screen and (min-width: $break-medium) {
+                        float: left;
+                        overflow: hidden;
+                        text-indent: 100%;
+                        margin: -1em 1.25em 0 0;
+                    }
+
+                    background-position: 0 0;
+                    height: 45px;
+                    width: 72px;
+                    background: url(https://assets.sky.com/dist/1271/images/sprite-s936cb39d45.png) no-repeat;
+                }
+            }
+        }
+    }
+}

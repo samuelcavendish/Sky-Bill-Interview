@@ -1,0 +1,18 @@
+﻿@model Sky.Models.Bills.Bill
+
+<div class="breadcrumb-wrapper container">
+    <ul class="breadcrumb">
+        <li class="medium"><a name="My Sky" href="#/">My Sky</a></li>
+        <li><i class="icon icon-chevron-right" aria-hidden="true"></i><a name="Bills &amp; payments" href="#/">Bills &amp; payments</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <h1>Bills &amp; Payments</h1>
+    <section class="bill">
+        @Html.DisplayForModel()
+    </section>
+    <section class="navigation">
+        @Html.Partial("Navigation")
+    </section>
+</div>

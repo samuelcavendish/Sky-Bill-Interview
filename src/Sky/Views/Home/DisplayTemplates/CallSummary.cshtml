@@ -1,0 +1,27 @@
+﻿@model Sky.Models.Bills.Calls.CallSummary
+
+@if (Model != null)
+{
+    <section class="call-summary summary accordian accordian-section" data-trigger="accordian-expand" data-calls-summary>
+        <header>
+            <a class="expandable" href="#/">
+                <span class="title">
+                    My calls
+                </span>
+                <span class="amount" data-total>
+                    @Model.Total.ToString("C")
+                </span>
+                <span class="chevron"></span>
+            </a>
+        </header>
+        <div class="detail" data-summary-details>
+            <div class="item-list calls" data-summary-items>
+                @Html.DisplayFor(x => x.Calls)
+            </div>
+            <div class="statement-total" data-summary-total>
+                <span class="label">Total</span>
+                <span class="amount" data-total>@Model.Total.ToString("C")</span>
+            </div>
+        </div>
+    </section>
+}
