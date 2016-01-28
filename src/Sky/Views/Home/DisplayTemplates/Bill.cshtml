@@ -10,21 +10,21 @@
 else
 {
     <h2>
-        Latest Bill <span class="date">(@Model.Statement.Period.From.ToString("dd MMM yyyy") - @Model.Statement.Period.To.ToString("dd MMM yyyy"))</span>
+        Latest Bill <span class="date">(<span data-from-date>@Model.Statement.Period.From.ToString("dd MMM yyyy")</span> - <span data-to-date>@Model.Statement.Period.To.ToString("dd MMM yyyy"))</span></span>
     </h2>
 
     @Html.DisplayFor(x => x.Package)
     @Html.DisplayFor(x => x.CallCharges)
     @Html.DisplayFor(x => x.SkyStore)
 
-    <section class="bill-summary summary">
+    <section class="bill-summary summary" data-bill-summary>
         <header>
-            <span class="title">Total Due @Model.Statement.Due.ToString("dd MMM yyyy")</span>
-            <span class="amount">@Model.Total.ToString("C")</span>
+            <span class="title">Total Due <span data-due-date>@Model.Statement.Due.ToString("dd MMM yyyy")</span></span>
+            <span class="amount" data-amount>@Model.Total.ToString("C")</span>
         </header>
     </section>
     <div class="statement-date">
-        Statement Date: <span class="date">@Model.Statement.Generated.ToString("dd MMM yyyy")</span>
+        Statement Date: <span class="date" data-statement-date>@Model.Statement.Generated.ToString("dd MMM yyyy")</span>
         <a href="javascript:window.print()" class="print">
             Print page
         </a>

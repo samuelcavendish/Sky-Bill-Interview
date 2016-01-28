@@ -93,6 +93,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Specs\Bill\Totals.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Totals.feature</DependentUpon>
+    </Compile>
     <Compile Include="Tests\BillCallsSteps.cs" />
     <Compile Include="Tests\BillStoreSteps.cs" />
     <Compile Include="Tests\BillSubscriptionsSteps.cs" />
@@ -118,6 +123,7 @@
     <Compile Include="Tests\AccordiansSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\MobileNavigationSteps.cs" />
+    <Compile Include="Tests\TotalsSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -141,6 +147,10 @@
     <None Include="Specs\Bill\Navigation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Navigation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Specs\Bill\Totals.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Totals.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -132,6 +132,11 @@ body > main {
                 span {
                     display: table-cell;
                     vertical-align: middle;
+                    
+                    span[data-due-date] {
+                        display: inline;
+                        vertical-align: top;
+                    }
                 }
 
                 .title {

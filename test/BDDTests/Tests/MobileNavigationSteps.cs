@@ -40,13 +40,13 @@ namespace BDDTests.Tests
         [When(@"I click the header bar")]
         public void WhenIClickTheHeaderBar()
         {
-            billPage.ClickHeaderBar();
+            billPage.HeaderBarClick();
         }
         
         [When(@"I click in the main")]
         public void WhenIClickInTheMain()
         {
-            billPage.ClickMain();
+            billPage.MainClick();
         }
         
         [Then(@"the navigation bar should be hidden")]
