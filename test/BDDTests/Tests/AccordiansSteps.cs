@@ -6,6 +6,7 @@ using TechTalk.SpecFlow;
 namespace BDDTests.Tests
 {
     [Binding]
+    [Scope(Feature = "Accordians")]
     public class AccordiansSteps : FluentTest
     {
         private SkyBillPage billPage;
@@ -20,6 +21,14 @@ namespace BDDTests.Tests
         public void GivenIAmOnTheBillPage()
         {
             billPage = new SkyBillPage(this).Go();
+        }
+
+        [Given(@"I am on the mobile bill page")]
+        public void GivenIAmOnTheMobileBillPage()
+        {
+            GivenIAmOnTheBillPage();
+            FluentSettings.Current.WindowWidth = 500;
+            billPage.Navigation().MobileNavigationTriggerVisible();
         }
 
         [When(@"I click the Subscription header")]

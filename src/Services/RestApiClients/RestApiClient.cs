@@ -1,11 +1,7 @@
-﻿using Microsoft.Extensions.OptionsModel;
-using Sky.Models.Configuration;
+﻿using Sky.Models.Configuration;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Threading.Tasks;
 
 namespace Sky.Services.RestApiClients
 {

@@ -110,8 +110,6 @@ namespace UnitTests.BillTests
 
             logger.AssertWasCalled(x => x.LogError(Arg<String>.Is.Equal("Failed to retrieve bill from endpoint"),
                 Arg<Exception>.Matches(y => y.ToString().Contains("The remote name could not be resolved"))));
-
-
         }
     }
 }

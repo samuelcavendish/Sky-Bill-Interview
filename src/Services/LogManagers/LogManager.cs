@@ -1,10 +1,7 @@
 ﻿using Microsoft.Extensions.OptionsModel;
 using Sky.Models.Configuration;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Sky.Services.LogManagers
 {

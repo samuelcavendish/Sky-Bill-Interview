@@ -6,6 +6,7 @@ using TechTalk.SpecFlow;
 namespace BDDTests.Tests
 {
     [Binding]
+    [Scope(Feature = "Bill Subscriptions")]
     public class BillSubscriptionsSteps : FluentTest
     {
         private SkyBillPage billPage;
@@ -20,6 +21,14 @@ namespace BDDTests.Tests
         public void GivenThatIVisitTheBillPage()
         {
             billPage = new SkyBillPage(this).Go();
+        }
+
+        [Given(@"I am on the mobile bill page")]
+        public void GivenIAmOnTheMobileBillPage()
+        {
+            GivenThatIVisitTheBillPage();
+            FluentSettings.Current.WindowWidth = 500;
+            billPage.Navigation().MobileNavigationTriggerVisible();
         }
 
         [When(@"I click the subscription header")]
@@ -46,8 +55,8 @@ namespace BDDTests.Tests
             billPage.SubscriptionSection().SectionDetailsItemsCount(p0);
         }
 
-        [Then(@"a total value in the details of £(.*)")]
-        public void ThenATotalValueInTheDetailsOf(Decimal p0)
+        [Then(@"a total value in the subscription details of £(.*)")]
+        public void ThenATotalValueInTheSubscriptionDetailsOf(Decimal p0)
         {
             billPage.SubscriptionSection().SectionDetailsTotal(p0);
         }

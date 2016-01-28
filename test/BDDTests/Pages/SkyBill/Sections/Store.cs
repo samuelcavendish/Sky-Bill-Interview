@@ -1,10 +1,5 @@
-﻿using FluentAutomation;
-using FluentAutomation.Interfaces;
+﻿using FluentAutomation.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BDDTests.Pages.SkyBill.Sections
 {
@@ -22,7 +17,8 @@ namespace BDDTests.Pages.SkyBill.Sections
         private const string Header = "section[data-store-summary] header";
         private const string HeaderTotal = "section[data-store-summary] header span[data-total]";
         private const string Details = "section[data-store-summary] div[data-summary-details]";
-        private const string DetailsItems = "section[data-store-summary] div[data-summary-details] div[data-items] div[data-item]";
+        private const string RentalDetailsItems = "section[data-store-summary] div[data-summary-details] div[data-items] div[data-item][data-rentals]";
+        private const string BuyAndKeepDetailsItems = "section[data-store-summary] div[data-summary-details] div[data-items] div[data-item][data-buy-and-keep]";
         private const string DetailsTotal = "section[data-store-summary] div[data-summary-details] div[data-summary-total] span[data-total]";
 
         public Store SectionHeaderClick()
@@ -66,9 +62,15 @@ namespace BDDTests.Pages.SkyBill.Sections
             return this;
         }
         
-        public Store SectionDetailsItemsCount(Int32 count)
+        public Store SectionDetailsRentalItemsCount(Int32 count)
         {
-            I.Expect.Count(count).Of(DetailsItems);
+            I.Expect.Count(count).Of(RentalDetailsItems);
+            return this;
+        }
+
+        public Store SectionDetailsBuyAndKeepItemsCount(Int32 count)
+        {
+            I.Expect.Count(count).Of(BuyAndKeepDetailsItems);
             return this;
         }
 

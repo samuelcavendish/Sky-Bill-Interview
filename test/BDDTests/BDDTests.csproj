@@ -82,6 +82,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Specs\Bill\BillStore.feature.cs">
+      <DependentUpon>BillStore.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Specs\Bill\BillCalls.feature.cs">
+      <DependentUpon>BillCalls.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Tests\BillCallsSteps.cs" />
+    <Compile Include="Tests\BillStoreSteps.cs" />
     <Compile Include="Tests\BillSubscriptionsSteps.cs" />
     <Compile Include="Pages\SkyBill\Sections\Navigation.cs" />
     <Compile Include="Pages\SkyBill\Sections\Store.cs" />
@@ -113,6 +125,14 @@
     <None Include="Specs\Bill\Accordians.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Accordians.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Specs\Bill\BillStore.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BillStore.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Specs\Bill\BillCalls.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BillCalls.feature.cs</LastGenOutput>
     </None>
     <None Include="Specs\Bill\BillSubscriptions.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

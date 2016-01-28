@@ -1,10 +1,7 @@
-﻿using Newtonsoft.Json;
-using Sky.Models.Bills;
+﻿using Sky.Models.Bills;
 using Sky.Services.LogManagers;
 using Sky.Services.RestApiClientFactories;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 

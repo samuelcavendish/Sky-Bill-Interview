@@ -6,6 +6,7 @@ using TechTalk.SpecFlow;
 namespace BDDTests.Tests
 {
     [Binding]
+    [Scope(Feature = "Mobile Navigation")]
     public class MobileNavigationSteps : FluentTest
     {
         private SkyBillPage billPage;
