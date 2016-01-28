@@ -20,6 +20,7 @@ namespace UnitTests
         // Set up application services
         public void ConfigureServices(IServiceCollection services)
         {
+            //Add the default DI. Items can be overridden in the tests if required
             services.AddOptions();
             services.Configure<EndpointSettings>(Configuration.GetSection("EndpointSettings"));
             services.Configure<LogSettings>(Configuration.GetSection("LogSettings"));

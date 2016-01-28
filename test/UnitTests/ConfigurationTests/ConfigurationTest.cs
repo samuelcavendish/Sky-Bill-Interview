@@ -19,6 +19,8 @@ namespace UnitTests.ConfigurationTests
         }
 
         [Fact]
+        //Validate the IOptions are being populated correctly
+        //since these values are used in other tests
         public void EndpointConfigValues_Valid()
         {
             container = serviceCollection.BuildServiceProvider();
@@ -36,6 +38,8 @@ namespace UnitTests.ConfigurationTests
         }
 
         [Fact]
+        //Validate the IOptions are being populated correctly
+        //since these values are used in other tests
         public void LoggingConfigValues_Valid()
         {
             container = serviceCollection.BuildServiceProvider();

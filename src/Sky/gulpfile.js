@@ -16,22 +16,27 @@ paths.js = paths.webroot + "scripts/**/*.js";
 paths.concatJsDest = paths.webroot + "js/sky.min.js";
 paths.concatCssDest = paths.webroot + "css";
 
+//remove compiled js files
 gulp.task("clean:js", function (cb) {
     rimraf(paths.concatJsDest, cb);
 });
 
+//remove compiled css files
 gulp.task("clean:css", function (cb) {
     rimraf(paths.concatCssDest, cb);
 });
 
+//clean out all compiled files
 gulp.task("clean", ["clean:js", "clean:css"]);
 
+//compile and minify top level sass pages
 gulp.task('compile:sass', function () {
     gulp.src(paths.sassPages)
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(gulp.dest(paths.concatCssDest));
 });
 
+//minify javascript
 gulp.task("min:js", function () {
     return gulp.src(paths.js)
         .pipe(concat(paths.concatJsDest))
@@ -46,6 +51,7 @@ gulp.task("min:js", function () {
 gulp.task('watch:sass', ['compile:sass'], function () {
     gulp.watch(paths.sass, ['compile:sass']);
 });
+// watch the javascript and minify on change
 gulp.task('watch:js', ['min:js'], function () {
     gulp.watch(paths.js, ['min:js']);
 });

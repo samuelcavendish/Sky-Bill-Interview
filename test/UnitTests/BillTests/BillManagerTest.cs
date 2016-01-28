@@ -30,6 +30,8 @@ namespace UnitTests.BillTests
         }
 
         [Fact]
+        //For the live Url check that the bill comes back as not null
+        //Check that the child objects exist
         public async Task DownloadBill_LiveUrl_ReturnsBill()
         {
             container = serviceCollection.BuildServiceProvider();
@@ -45,6 +47,8 @@ namespace UnitTests.BillTests
         }
 
         [Fact]
+        //For the live Url check that the bill comes back as not null
+        //Validate the periods and object counts
         public async Task DownloadBill_LiveUrl_DeserialisationValid()
         {
             container = serviceCollection.BuildServiceProvider();
@@ -61,6 +65,9 @@ namespace UnitTests.BillTests
         }
 
         [Fact]
+        //For the live Url check that the bill comes back as not null
+        //Check that the totals all calculate correctly
+        //NOTE: This test currently failed. I am leaving as is as I believe it is correct for the test to fail
         public async Task DownloadBill_LiveUrl_TotalsAddUp()
         {
             container = serviceCollection.BuildServiceProvider();
@@ -76,6 +83,8 @@ namespace UnitTests.BillTests
         }
 
         [Fact]
+        //If the live url is unavailable we can still test the deserialise with a local copy
+        //Check that the child objects exist
         public async Task DownloadBill_LocalFileCopy_ReturnsBill()
         {
             JObject localFileCopy = JObject.Parse(File.ReadAllText(Path.Combine(Environment.CurrentDirectory, @"BillTests/bill.json")));
@@ -94,6 +103,8 @@ namespace UnitTests.BillTests
         }
 
         [Fact]
+        //If the live url is unavailable we can still test the deserialise with a local copy
+        //Validate the periods and object counts
         public async Task DownloadBill_LocalFileCopy_DeserialisationValid()
         {
             JObject localFileCopy = JObject.Parse(File.ReadAllText(Path.Combine(Environment.CurrentDirectory, @"BillTests/bill.json")));
@@ -113,6 +124,9 @@ namespace UnitTests.BillTests
         }
 
         [Fact]
+        //If the live url is unavailable we can still test the deserialise with a local copy
+        //Check that the totals all calculate correctly
+        //NOTE: This test currently failed. I am leaving as is as I believe it is correct for the test to fail
         public async Task DownloadBill_LocalFileCopy_TotalsAddUp()
         {
             JObject localFileCopy = JObject.Parse(File.ReadAllText(Path.Combine(Environment.CurrentDirectory, @"BillTests/bill.json")));
@@ -132,6 +146,8 @@ namespace UnitTests.BillTests
         }
 
         [Fact]
+        //Mock an invalid format
+        //Check that the bill was null and a log call was made
         public async Task DownloadBill_Mock_InvalidJson()
         {
             var mockFactory = MockFactoryCreator.CreateMockFactoryGetAsyncResponse(
@@ -151,6 +167,8 @@ namespace UnitTests.BillTests
         }
 
         [Fact]
+        //Mock an invalid format
+        //Check that the bill was null and a log call was made
         public async Task DownloadBill_CannotResolve()
         {
             var logger = MockRepository.GenerateStub<ILogManager>();
@@ -165,7 +183,6 @@ namespace UnitTests.BillTests
             var bill = await billManager.GetBillAsync();
 
             Assert.Null(bill);
-
             logger.AssertWasCalled(x => x.LogError(Arg<String>.Is.Equal("Failed to retrieve bill from endpoint"),
                 Arg<Exception>.Matches(y => y.ToString().Contains("The remote name could not be resolved"))));
         }

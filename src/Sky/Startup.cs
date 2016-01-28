@@ -24,11 +24,13 @@ namespace Sky
 
         public void ConfigureServices(IServiceCollection services)
         {
+            //Setup the options for the appsettings.json configurations
             services.Configure<EndpointSettings>(Configuration.GetSection("EndpointSettings"));
             services.Configure<LogSettings>(Configuration.GetSection("LogSettings"));
 
             services.AddMvc();
 
+            //Add the sky services to the service collection for DI
             services.AddSkyServices();
         }
 

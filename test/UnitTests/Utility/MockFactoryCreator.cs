@@ -9,6 +9,12 @@ namespace UnitTests.Utility
 {
     public static class MockFactoryCreator
     {
+        /// <summary>
+        /// Return a Client factory that creates a client that will return 
+        /// the passed in httpresonsemessage when getasync is called
+        /// </summary>
+        /// <param name="response"></param>
+        /// <returns></returns>
         public static IRestApiClientFactory CreateMockFactoryGetAsyncResponse(HttpResponseMessage response)
         {
             var restClient = MockRepository.GenerateStub<IRestApiClient>();

@@ -13,8 +13,7 @@ namespace Sky.Controllers
         {
             _billManager = billManager;
         }
-
-        // GET: /<controller>/
+        
         public async Task<IActionResult> Index()
         {
             var bill = await _billManager.GetBillAsync();
