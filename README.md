@@ -1,6 +1,6 @@
 # Sky-Bill-Interview
 
-This is the responsive webpage branded using styles from Sky's live website. The project is for the sky itnterview test, the spec for which can be found at https://github.com/ldabiralai/bill-unattended-test
+This is the responsive webpage branded using styles from Sky's live website. The project is for the sky interview test, the spec for which can be found at https://github.com/ldabiralai/bill-unattended-test
 
 Prerequisites:
 * Visual Studio 2015
