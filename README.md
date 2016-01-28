@@ -26,3 +26,4 @@ Notes:
 * All layout e.g header, footer, bill picker and search are purely for display purposes
 * The default gulp task, which compiles and minifies the sass and javascript files is set to run at startup and then set to watch the files for changes. If for whatever reason these tasks do not run, they can be triggered manually from the task runner explorer. If you have preinstalled 64 bit node and are having conflicts with visual studios installation please see http://blogs.msdn.com/b/webdev/archive/2015/03/19/customize-external-web-tools-in-visual-studio-2015.aspx
 * For the purposes of this demo, some of the markup and styling, e.g. that refering to accessibility settings, were omitted from the project
+* For time purposes logging has been achieved with a simple file writter. In a production application this should obviously be substituted for a more robust and thread safe logger
