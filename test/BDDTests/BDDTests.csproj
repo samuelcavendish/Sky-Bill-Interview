@@ -82,6 +82,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Pages\SkyBill\Sections\Navigation.cs" />
     <Compile Include="Specs\Bill\BillStore.feature.cs">
       <DependentUpon>BillStore.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -95,7 +96,6 @@
     <Compile Include="Tests\BillCallsSteps.cs" />
     <Compile Include="Tests\BillStoreSteps.cs" />
     <Compile Include="Tests\BillSubscriptionsSteps.cs" />
-    <Compile Include="Pages\SkyBill\Sections\Navigation.cs" />
     <Compile Include="Pages\SkyBill\Sections\Store.cs" />
     <Compile Include="Pages\SkyBill\Sections\Calls.cs" />
     <Compile Include="Pages\SkyBill\Sections\Subscription.cs" />
