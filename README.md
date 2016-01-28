@@ -14,7 +14,7 @@ Instructions:
 
 <img src="http://blogs.msdn.com/resized-image.ashx/__size/550x0/__key/communityserver-blogs-components-weblogfiles/00-00-00-63-56/0458.commands.png" />
 
-* Only once the site is running then the BDD Tests can be run. The Url for the site can be modified via the App.Config
+* Only once the site is running can the BDD Tests be run. The Url for the site can be modified via the App.Config
 * Both the BDD tests and the Unit Tests can be run through the test explorer in Visual studio
 
 Tests:
