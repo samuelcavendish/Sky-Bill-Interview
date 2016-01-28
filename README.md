@@ -1,6 +1,6 @@
 # Sky-Bill-Interview
 
-This is the responsive webpage branded using styles from Sky's live website. The project is for the sky itnterview test, the spec for which can be found at https://github.com/ldabiralai/bill-unattended-test
+This is the responsive webpage branded using styles from Sky's live website. The project is for the sky interview test, the spec for which can be found at https://github.com/ldabiralai/bill-unattended-test
 
 Prerequisites:
 * Visual Studio 2015
@@ -10,11 +10,11 @@ Prerequisites:
 Instructions:
 * Clone/download the solution
 * Open the solution in visual studio
-* Run the web project using one of the two configured profiles (either IIS Express or web). I would recommend running using web which will cause the site to be hosted by Kestrel (swapping can be achieved using the dropdown as shown in the example image)
+* Run the web project using one of the two configured profiles (either IIS Express or web). I would recommend running using web which will cause the site to be hosted by Kestrel (swapping can be achieved using the dropdown as shown in the example image). After starting it hosting with Kestrel you can debug -> Detatch all to leave debug mode. The host process will still be running
 
 <img src="http://blogs.msdn.com/resized-image.ashx/__size/550x0/__key/communityserver-blogs-components-weblogfiles/00-00-00-63-56/0458.commands.png" />
 
-* Only once the site is running then the BDD Tests can be run. The Url for the site can be modified via the App.Config
+* Only once the site is running can the BDD Tests be run. The Url for the site can be modified via the App.Config
 * Both the BDD tests and the Unit Tests can be run through the test explorer in Visual studio
 
 Tests:
