@@ -10,7 +10,10 @@ Prerequisites:
 Instructions:
 * Clone/download the solution
 * Open the solution in visual studio
-* Run the web project using one of the two configured profiles (either IIS Express or web). I would recommend running using web which will cause the site to be hosted by Kestrel
+* Run the web project using one of the two configured profiles (either IIS Express or web). I would recommend running using web which will cause the site to be hosted by Kestrel (swapping can be achieved using the dropdown as shown in the example image)
+
+<img src="http://blogs.msdn.com/resized-image.ashx/__size/550x0/__key/communityserver-blogs-components-weblogfiles/00-00-00-63-56/0458.commands.png" />
+
 * Only once the site is running then the BDD Tests can be run. The Url for the site can be modified via the App.Config
 * Both the BDD tests and the Unit Tests can be run through the test explorer in Visual studio
 
